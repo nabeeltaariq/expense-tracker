@@ -1,38 +1,67 @@
-.App {
+.container {
+  max-width: 400px;
+  min-height: 400px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px gray;
+  margin-top: 50px;
+  background-color: gainsboro;
+  padding: 25px 50px;
+}
+
+.text-center {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.expense-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px black;
 }
 
-.App-link {
-  color: #61dafb;
+.transaction-form input {
+  width: 100%;
+  height: 25px;
+  margin-top: 5px;
+  outline-width: 0px;
+  border: 0px;
+  counter-increment: none;
+  -webkit-appearance: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input[type='submit'] {
+  margin-left: 3px;
+  height: 40px;
+  background-color: #325aa8;
+}
+.transaction-list {
+  width: 100%;
+  margin: 10px 0px;
+  padding: 5px 0;
+  list-style: none;
+}
+label {
+  font-weight: bolder;
+  margin: 5px 0px;
+}
+.transaction-list > li {
+  display: flex;
+  justify-content: space-between;
+  border-right: 3px solid black;
+  margin: 7px;
+  background-color: white;
+  padding: 3px;
+  box-shadow: 0 0 10px grey;
+  height: 30px;
 }
