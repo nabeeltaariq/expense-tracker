@@ -1,8 +1,13 @@
 import './App.css'
 import Child from './Child'
+import { TransactionProvider } from './transactionContext'
 
 function App() {
-  return <Child />
+  return (
+    <TransactionProvider>
+      <Child />
+    </TransactionProvider>
+  )
 }
 
 export default App
